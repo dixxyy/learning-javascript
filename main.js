@@ -9,3 +9,8 @@ btn1.style.fontSize = '24px';
 btn1.style.padding = '5px';
 
 console.log(btn2);
+
+function gantiWarna() {
+  console.log('aman');
+  btn1.style.background = 'lightblue';
+}
