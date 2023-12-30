@@ -13,6 +13,8 @@
     - jumlah hari masuk kerja
 */
 
+// TUGAS 1
+
 let r = prompt('masukkan jari-jari lingkaran: ');
 let a = prompt('masukkan alas: ');
 let t = prompt('masukkan tinggi: ');
@@ -41,6 +43,8 @@ lingkaran(r);
 segitiga(a, t);
 persegiPanjang(p, l);
 jajarGenjang(a, t);
+
+// TUGAS 2
 
 let nama = prompt('Masukkan nama: ');
 let gaji = prompt('masukkan gaji anda perhari: ');
