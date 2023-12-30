@@ -30,6 +30,11 @@ const persegiPanjang = (p, l) => {
   console.log('luas persegi panjang adalah: ', p * l);
 };
 
+const jajarGenjang = (a, t) => {
+  console.log('luas jajar genjang adalah: ', a * t);
+};
+
 lingkaran(5);
 segitiga(4, 3);
 persegiPanjang(6, 7);
+jajarGenjang(8, 9);
