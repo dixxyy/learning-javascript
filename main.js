@@ -1,22 +1,22 @@
 /*
   PERULANGAN JAVASCRIPT
+  BUAT PERULANGAN DARI SUATU VARIABLE BERTIPE ARRAY 
+  contoh: 
+  const x = [3, 5, 12]
+  // loop data
+  // total nilai adalah 20 karena 3 + 5 + 12 = 20
+
+  looping data tersebut menggunakan for, while, dan do-while.
+  munculkan jumlah hasil penambahan semua angka yang ada
+  di dalam array tersebut seperti contoh
 */
 
-for (let i = 1; i <= 5; i++) {
-  if (i % 2 == 1) console.log('data ganjil adalah ', i);
-}
-for (let i = 1; i <= 5; i++) {
-  if (i % 2 == 0) console.log('data genap adalah ', i);
+const i = [4, 7, 15];
+let total = 0;
+
+for (let j = 0; j < i.length; j++) {
+  total = total + i[j];
+  console.log(total);
 }
 
-let j = 1;
-while (j <= 10) {
-  console.log('data j ke - ', j);
-  j++;
-}
-
-let k = 1;
-do {
-  console.log('data k ke - ', k);
-  k++;
-} while (k <= 10);
+console.log(`jumlah penambahan dari looping array [4, 7, 15] adalah ${total}`);
