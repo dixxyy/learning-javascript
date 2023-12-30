@@ -13,8 +13,11 @@
     - jumlah hari masuk kerja
 */
 
-// let x = prompt('masukkan angka pertama: '); // Prompt akan menampilkan dialog untuk pengguna memasukkan nilai
-// let y = prompt('masukkan angka kedua: '); // Prompt akan menampilkan dialog untuk pengguna memasukkan nilai
+let r = prompt('masukkan jari-jari lingkaran: ');
+let a = prompt('masukkan alas: ');
+let t = prompt('masukkan tinggi: ');
+let p = prompt('masukkan panjang: ');
+let l = prompt('masukkan lebar:');
 
 const phi = 3.14;
 
@@ -34,7 +37,17 @@ const jajarGenjang = (a, t) => {
   console.log('luas jajar genjang adalah: ', a * t);
 };
 
-lingkaran(5);
-segitiga(4, 3);
-persegiPanjang(6, 7);
-jajarGenjang(8, 9);
+lingkaran(r);
+segitiga(a, t);
+persegiPanjang(p, l);
+jajarGenjang(a, t);
+
+let nama = prompt('Masukkan nama: ');
+let gaji = prompt('masukkan gaji anda perhari: ');
+let hari = prompt('jumlah hari masuk kerja: ');
+
+const totalGaji = (gaji, hari) => {
+  console.log(`nama anda adalah ${nama} dan jumlah gaji anda adalah Rp.${gaji * hari}`);
+};
+
+totalGaji(gaji, hari);
