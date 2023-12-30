@@ -19,4 +19,16 @@ for (let j = 0; j < i.length; j++) {
   console.log(total);
 }
 
-console.log(`jumlah penambahan dari looping array [4, 7, 15] adalah ${total}`);
+console.log(`jumlah penambahan dari for looping array [4, 7, 15] adalah ${total}`);
+
+const l = [4, 7, 15];
+let jumlah = 0;
+let k = 0;
+
+while (k < l.length) {
+  jumlah = jumlah + l[k];
+  k++;
+  console.log(jumlah);
+}
+
+console.log(`jumlah penambahan dari while looping array [4, 7, 15] adalah ${jumlah}`);
