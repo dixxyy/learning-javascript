@@ -26,5 +26,10 @@ const segitiga = (a, t) => {
   console.log('luas segitiga adalah: ', (a * t) / 2);
 };
 
+const persegiPanjang = (p, l) => {
+  console.log('luas persegi panjang adalah: ', p * l);
+};
+
 lingkaran(5);
 segitiga(4, 3);
+persegiPanjang(6, 7);
