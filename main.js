@@ -14,3 +14,9 @@ while (j <= 10) {
   console.log('data j ke - ', j);
   j++;
 }
+
+let k = 1;
+do {
+  console.log('data k ke - ', k);
+  k++;
+} while (k <= 10);
