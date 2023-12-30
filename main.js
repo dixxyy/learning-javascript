@@ -32,3 +32,15 @@ while (k < l.length) {
 }
 
 console.log(`jumlah penambahan dari while looping array [4, 7, 15] adalah ${jumlah}`);
+
+const a = [4, 7, 19];
+let hasil = 0;
+let b = 0;
+
+do {
+  hasil = hasil + a[b];
+  console.log(hasil);
+  b++;
+} while (b < a.length);
+
+console.log(`jumlah penambahan dari do-while looping array [4, 7, 19] adalah ${hasil}`);
