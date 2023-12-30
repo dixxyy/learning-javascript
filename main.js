@@ -22,4 +22,9 @@ const lingkaran = (r) => {
   console.log('luas lingkaran adalah: ', phi * r * r);
 };
 
+const segitiga = (a, t) => {
+  console.log('luas segitiga adalah: ', (a * t) / 2);
+};
+
 lingkaran(5);
+segitiga(4, 3);
