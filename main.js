@@ -1,10 +1,10 @@
 /*
   TUGAS BESAR: 
   1 MEMBUAT PERHITUNGAN MATEMATIKA
-  - luas lingkaran
-  - luas segitiga
-  - luas persegi panjang
-  - luas jajar genjang
+    - luas lingkaran
+    - luas segitiga
+    - luas persegi panjang
+    - luas jajar genjang
   
   2. menghitung total gaji yang didapat dalam satu bulan
     dengan input minimal:
