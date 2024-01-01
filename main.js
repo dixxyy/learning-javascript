@@ -2,34 +2,31 @@ const token = ~~[Math.random() * 12345678];
 
 const pictures = ['1.jpg', '2.jpg', '3.jpg'];
 
-function login(username, callback) {
+function login(username) {
   console.log('prosessing data..');
-  setTimeout(() => {
-    callback({ token, username });
-  }, 500);
+  return new Promise((success, failed) => {
+    setTimeout(() => {
+      if (username != 'dixxyy') failed('nyari apa hayo');
+      success(token);
+    }, 500);
+  });
 }
 
-function getUser(token, callback) {
+function getUser(token) {
   console.log('prosessing token..');
   setTimeout(() => {
-    if (token) callback({ apiKey: 'xkey123' });
+    if (token) return { apiKey: 'xkey123' };
   }, 500);
 }
 
-function getPictures(apiKey, callback) {
+function getPictures(apiKey) {
   console.log('prosessing picture..');
   setTimeout(() => {
-    if (apiKey) callback({ pic: pictures });
+    if (apiKey) return { pic: pictures };
   }, 1500);
 }
 
-login('dixxyy', function (response) {
-  const { token } = response;
-  getUser(token, function (response) {
-    const { apiKey } = response;
-    getPictures(apiKey, function (response) {
-      const { pic } = response;
-      console.log(pic);
-    });
-  });
+const user = login('dixxyy');
+user.then(function (response) {
+  console.log(response);
 });
