@@ -7,16 +7,19 @@ function login(username) {
   return new Promise((success, failed) => {
     setTimeout(() => {
       if (username != 'dixxyy') failed('nyari apa hayo');
-      success(token);
+      success({ token });
     }, 500);
   });
 }
 
 function getUser(token) {
   console.log('prosessing token..');
-  setTimeout(() => {
-    if (token) return { apiKey: 'xkey123' };
-  }, 500);
+  return new Promise((success, failed) => {
+    if (!token) failed('sorry no token, cannot access');
+    setTimeout(() => {
+      success({ apiKey: 'xkey123' });
+    }, 500);
+  });
 }
 
 function getPictures(apiKey) {
@@ -28,5 +31,11 @@ function getPictures(apiKey) {
 
 const user = login('dixxyy');
 user.then(function (response) {
-  console.log(response);
+  const { token } = response;
+  getUser(token)
+    .then(function (response) {
+      const apiKey = response;
+      console.log(apiKey);
+    })
+    .catch((err) => console.log(err));
 });
