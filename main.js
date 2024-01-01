@@ -16,14 +16,20 @@ function getUser(token, callback) {
   }, 500);
 }
 
-function getPictures(apiKey) {
-  if (apiKey) return pictures;
+function getPictures(apiKey, callback) {
+  console.log('prosessing picture..');
+  setTimeout(() => {
+    if (apiKey) callback({ pic: pictures });
+  }, 1500);
 }
 
 login('dixxyy', function (response) {
   const { token } = response;
   getUser(token, function (response) {
     const { apiKey } = response;
-    console.log(apiKey);
+    getPictures(apiKey, function (response) {
+      const { pic } = response;
+      console.log(pic);
+    });
   });
 });
