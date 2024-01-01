@@ -24,18 +24,28 @@ function getUser(token) {
 
 function getPictures(apiKey) {
   console.log('prosessing picture..');
-  setTimeout(() => {
-    if (apiKey) return { pic: pictures };
-  }, 1500);
+  return new Promise((success, failed) => {
+    if (!apiKey) failed('mana apiKey nya bjir');
+    setTimeout(() => {
+      success({ pic: pictures });
+    }, 1500);
+  });
 }
 
-const user = login('dixxyy');
-user.then(function (response) {
-  const { token } = response;
-  getUser(token)
-    .then(function (response) {
-      const apiKey = response;
-      console.log(apiKey);
-    })
-    .catch((err) => console.log(err));
-});
+async function UserDisplay() {
+  try {
+    const { token } = await login('dixxyy');
+    const { apiKey } = await getUser(token);
+    const { pic } = await getPictures(apiKey);
+
+    console.log(`
+    token anda adalah: ${token}
+    apiKey anda adalah: ${apiKey}
+    hasil request gambar sebagai berikut: ${pic}
+    `);
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+UserDisplay();
